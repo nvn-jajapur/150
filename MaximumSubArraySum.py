@@ -5,8 +5,6 @@ Here in this algorithm, we take the sum variable and only check for the positive
 If we encounter -ves, then we start again the sum for 0
 If we encounter +ves, then we add the sum and which would be resultant answer
 '''
-
-
 import sys
 def maximum_sub_array_sum(arr:[])->int:
     sum=0
@@ -23,20 +21,16 @@ def maximum_sub_array_sum(arr:[])->int:
             end=i
         if(sum<0):
             sum=0
-        print(ansStart,end)
     return maxSum
 
+# If only sum is asked without the positions
 def maximum_sub_array_sum1(arr:[])->int:
     sum=0
     maxSum=-sys.maxsize-1
-    start,end=-1,-1
     for i,v in enumerate(arr):
         sum+=v
-        if sum==0:
-            start=i
         if sum>=maxSum:
             maxSum =sum
-            end =i
         if(sum<0):
             sum=0
     return maxSum
@@ -44,6 +38,7 @@ def maximum_sub_array_sum1(arr:[])->int:
 if __name__=="__main__":
     arr = [-1,-2,0,0,8,-1,0]
     print(maximum_sub_array_sum(arr))
+    print(maximum_sub_array_sum1(arr))
 '''
 Time Complexity : O(N)
 Space Complexity : O(1)
