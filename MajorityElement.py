@@ -52,6 +52,6 @@ Space Complexity : O(1)
 
        
 if __name__ == "__main__":
-    arr = [2,1,3,4,2,2,1,2,2]
+    arr = [1,1,3,4,2,2,1,2,2]
     # print(majority_element_better(arr,len(arr)/2))
     print(majority_element_optimal(arr))

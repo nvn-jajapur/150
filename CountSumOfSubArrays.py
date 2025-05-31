@@ -23,5 +23,5 @@ Time Complexity : O(N)
 Space Complexity : O(1)
 '''
 if __name__=="__main__":
-    arr = [1,2,3]
+    arr = [1,2,3,-3,1,1,1,4,2,-3]
     print(count_sum_of_sub_array(arr,3))
