@@ -40,7 +40,7 @@ def maximum_sub_array_sum1(arr:[])->int:
     return maxSum
 
 if __name__=="__main__":
-    arr = [-1,-2,1,0,0,8,-1,0]
+    arr = [2,-3,4,-2,2,1,-1,4]
     print(maximum_sub_array_sum(arr))
     print(maximum_sub_array_sum1(arr))
 '''

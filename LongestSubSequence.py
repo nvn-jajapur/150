@@ -44,7 +44,7 @@ def longest_sub_sequence_optimal(arr:[])->int:
     return retCount
 
 if __name__ == "__main__":
-    arr = [1,101,6,103,3,2,4,102,9,100,104,104,104,104,5]
+    arr = [0,-1]
     # print(longest_sub_sequence(arr))
     # print(longest_sub_sequence_better(arr))
     print(longest_sub_sequence_optimal(arr))

@@ -1,3 +1,4 @@
+from typing import List
 def secondLargest(arr:[])->int:
     l=arr[0]
     sl=-1
@@ -17,7 +18,7 @@ def checkSorted(arr:[])->bool:
     return True  
 def remove_duplicates_from_the_sorted_array(arr:[])->[]:
     i=0
-    for j in range(1,len(arr)-1):
+    for j in range(1,len(arr)):
         if arr[i]!=arr[j]:
             arr[i+1]=arr[j]
             i+=1
@@ -64,19 +65,19 @@ def union_array(arr1:[],arr2:[])->[]:
     union =[]
     while i<n1 and j<n2:
         if arr1[i]<arr2[j]:
-            if not union or union[-1]!=arr1[i]:
+            if i not in union or union[-1]!=arr1[i]:
                 union.append(arr1[i])
             i+=1
         else:
-            if not union or union[-1]!=arr2[j]:
+            if j not in union or union[-1]!=arr2[j]:
                 union.append(arr2[j])
             j+=1
     while i<n1:
-        if not union or union[-1]!=arr1[i]:
+        if i not in union or union[-1]!=arr1[i]:
             union.append(arr1[i])
         i+=1
     while j<n2:
-        if not union or union[-1]!=arr2[j]:
+        if j not in union or union[-1]!=arr2[j]:
             union.append(arr2[j])
         j+=1
     return union
@@ -134,7 +135,11 @@ def findone(arr:[])->int:
         xor^=v
     return xor
 
-
+def removeDuplicates( nums: List[int]) -> int:
+        mySet = set(nums)
+        nums = tuple(mySet)
+        print(nums)
+        return len(mySet)
         
 
             
@@ -143,8 +148,8 @@ if __name__ == "__main__":
     arr=[1,1,2,3,5,3,2]
     brr = [0,1,2,3,4]
     # print(secondLargest(arr))
-    print(checkSorted(arr))
-    #print(remove_duplicates_from_the_sorted_array(arr))
+    # print(checkSorted(arr))
+    # print(remove_duplicates_from_the_sorted_array(arr))
     #print(left_rotate(arr,2))
     # print(right_rotate(arr,5))
     # print(move_zeros(arr))
@@ -154,3 +159,4 @@ if __name__ == "__main__":
     # print(checkMissingNumber(arr))
     # print(count1s(arr))
     # print(findone(arr))
+    print(removeDuplicates(arr))

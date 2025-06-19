@@ -43,7 +43,7 @@ def fourSumOptimal(arr:[], target :int)->[]:
                         k+=1
                     while ( k<l and arr[l]== arr[l+1]):
                         l-=1
-                elif (sum>0):
+                elif (sum>target):
                     l-=1
                 else:
                     k+=1
@@ -54,6 +54,6 @@ Time Complexity : O(N3)
 Space Complexity : O(Temp)
 '''
 if __name__ =="__main__":
-    arr =[1,-1,0,2,3,0,1]
+    arr =[1,0,-1,0,-2,2]
     # print(fourSum(arr,1))
-    print(fourSumOptimal(arr,1))
+    print(fourSumOptimal(arr,0))
