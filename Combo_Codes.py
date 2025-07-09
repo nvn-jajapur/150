@@ -33,13 +33,7 @@ def left_rotate(arr:[],k:int)->[]:
     return arr
 def right_rotate(arr:[],k:int)->[]:
     k=k%len(arr)
-    while k>0:
-        temp =arr[len(arr)-1]
-        for i in range(len(arr)-1,0,-1):
-            arr[i]=arr[i-1]
-        arr[0]=temp
-        k-=1
-    return arr
+    
 
 def move_zeros(arr:[])->[]:
     j=-1
